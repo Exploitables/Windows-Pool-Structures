@@ -15,8 +15,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Windows Pool Structures.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClInclude Include="pool_20H2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pool_21H2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

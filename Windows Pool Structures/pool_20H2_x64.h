@@ -22,6 +22,16 @@ typedef struct _POOL_HEADER
 	};
 } POOL_HEADER, * PPOOL_HEADER;
 
+typedef struct _OBJECT_HEADER_QUOTA
+{
+	unsigned long PagedPoolCharge;
+	unsigned long NonPagedPoolCharge;
+	unsigned long SecurityDescriptorCharge;
+	unsigned long Reserved1;
+	unsigned long long SecurityDescriptorQuotaBlock;
+	unsigned long Reserved2;
+} OBJECT_HEADER_QUOTA, * POBJECT_HEADER_QUOTA;
+
 typedef struct _OBJECT_HEADER
 {
 	unsigned long long PointerCount;
@@ -64,13 +74,3 @@ typedef struct _OBJECT_HEADER
 	unsigned long long* SecurityDescriptor;
 	void* Body;
 } OBJECT_HEADER, * POBJECT_HEADER;
-
-typedef struct _OBJECT_HEADER_QUOTA
-{
-	unsigned long PagedPoolCharge;
-	unsigned long NonPagedPoolCharge;
-	unsigned long SecurityDescriptorCharge;
-	unsigned long Reserved1;
-	unsigned long long SecurityDescriptorQuotaBlock;
-	unsigned long Reserved2;
-} OBJECT_HEADER_QUOTA, * POBJECT_HEADER_QUOTA;
