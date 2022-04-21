@@ -1,5 +1,3 @@
-#include <Windows.h>
-
 typedef struct _POOL_HEADER
 {
 	union
@@ -35,8 +33,17 @@ typedef struct _OBJECT_HEADER_QUOTA
 	unsigned long SecurityDescriptorCharge;
 	unsigned long Reserved1;
 	void* SecurityDescriptorQuotaBlock;
-	unsigned long Reserved2;
+	unsigned long long Reserved2;
 } OBJECT_HEADER_QUOTA, * POBJECT_HEADER_QUOTA;
+
+typedef struct _QUAD
+{
+	union
+	{
+		unsigned long long UseThisFieldToCopy;
+		double DoNotUseThisField;
+	};
+} QUAD, * PQUAD;
 
 typedef struct _OBJECT_HEADER
 {
@@ -52,31 +59,31 @@ typedef struct _OBJECT_HEADER
 	union
 	{
 		unsigned char TraceFlags;
-		unsigned long DbgRefTrace;
-		unsigned long DbgTracePermanent;
+		unsigned char DbgRefTrace;
+		unsigned char DbgTracePermanent;
 	};
 
 	unsigned char InfoMask;
 	union
 	{
 		unsigned char Flags;
-		unsigned long NewObject;
-		unsigned long KernelObject;
-		unsigned long KernelOnlyAccess;
-		unsigned long ExclusiveObject;
-		unsigned long PermanentObject;
-		unsigned long DefaultSecurityQuota;
-		unsigned long SingleHandleEntry;
-		unsigned long DeletedInline;
+		unsigned char NewObject;
+		unsigned char KernelObject;
+		unsigned char KernelOnlyAccess;
+		unsigned char ExclusiveObject;
+		unsigned char PermanentObject;
+		unsigned char DefaultSecurityQuota;
+		unsigned char SingleHandleEntry;
+		unsigned char DeletedInline;
 	};
 
 	unsigned long Reserved;
 	union
 	{
-		unsigned long long* ObjectCreateInfo;
-		unsigned long long* QuotaBlockCharged;
+		void* ObjectCreateInfo;
+		void* QuotaBlockCharged;
 	};
 
-	unsigned long long* SecurityDescriptor;
+	void* SecurityDescriptor;
 	void* Body;
 } OBJECT_HEADER, * POBJECT_HEADER;

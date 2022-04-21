@@ -13,13 +13,19 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\x64">
+      <UniqueIdentifier>{83ea32c0-db0e-4d46-be14-0efacc68c91c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\x86">
+      <UniqueIdentifier>{d829c3d4-cfd7-42ba-8ff0-dc6cffa53336}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pool_20H2.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="pool_20H2_x64.h">
+      <Filter>Header Files\x64</Filter>
     </ClInclude>
-    <ClInclude Include="pool_21H2.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="pool_21H2_x64.h">
+      <Filter>Header Files\x64</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
