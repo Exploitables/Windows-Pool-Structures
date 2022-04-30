@@ -21,6 +21,8 @@
   <ItemGroup>
     <ClInclude Include="pool_20H2_x64.h" />
     <ClInclude Include="pool_21H2_x64.h" />
+    <ClInclude Include="pool_7_6_1_SP1_x64.h" />
+    <ClInclude Include="pool_enums.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

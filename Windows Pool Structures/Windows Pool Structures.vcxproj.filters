@@ -27,5 +27,11 @@
     <ClInclude Include="pool_21H2_x64.h">
       <Filter>Header Files\x64</Filter>
     </ClInclude>
+    <ClInclude Include="pool_enums.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pool_7_6_1_SP1_x64.h">
+      <Filter>Header Files\x64</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
